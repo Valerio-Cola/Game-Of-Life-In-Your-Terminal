@@ -17,19 +17,16 @@ int cursor_x = 0, cursor_y = 0;
 int is_running = 0;
 int is_paused = 0;
 
-// Aggiungi questa funzione per salvare lo stato iniziale
 int **initial_state;
 
-// Aggiungi dopo le altre variabili globali
 unsigned long generation = 0;
 
-// Aggiungi dopo le altre variabili globali
 int current_delay = 200000;  // Delay iniziale in microsecondi
 
-// All'inizio del file, dopo gli #include e le definizioni globali
 void show_menu(void);  // Prototipo della funzione
 
-// Funzioni di allocazione e gestione memoria
+
+// Funzioni di allocazione e liberazione memoria
 int** allocate_grid(int rows, int cols) {
     int **grid = (int**)malloc(rows * sizeof(int*));
     for(int i = 0; i < rows; i++) {
@@ -56,7 +53,6 @@ int count_active_cells() {
     return count;
 }
 
-// Modifica della funzione draw_grid
 void draw_grid() {
     clear();
     int start_y = (LINES - height) / 2;
@@ -65,15 +61,14 @@ void draw_grid() {
     int center_x = cursor_x - (width / 2);
     int center_y = (height / 2) - cursor_y;
     
-    // Aggiunto contatore popolazione
     mvprintw(0, 0, "Generazione: %lu | Popolazione: %d | Velocità: %dms | Posizione: (%d,%d) | Centro: (%d,%d)", 
              generation,
-             count_active_cells(),  // Nuovo contatore
+             count_active_cells(),
              current_delay/1000, 
              cursor_x, cursor_y,
              center_x, -center_y);
 
-    // Resto del codice invariato
+
     for(int i = 0; i < height; i++) {
         for(int j = 0; j < width; j++) {
             if(!is_running && i == cursor_y && j == cursor_x) {
@@ -88,7 +83,6 @@ void draw_grid() {
     refresh();
 }
 
-// Modifica la funzione count_neighbors per implementare il wrapping
 int count_neighbors(int y, int x) {
     int count = 0;
     for(int i = -1; i <= 1; i++) {
@@ -124,7 +118,6 @@ void calculate_next_generation() {
     next_grid = temp;
 }
 
-// Aggiungi questa funzione dopo le altre funzioni di gestione griglia
 void reset_grid() {
     for(int i = 0; i < height; i++) {
         for(int j = 0; j < width; j++) {
@@ -152,7 +145,6 @@ void restart_game() {
     }
 }
 
-// Modifica edit_mode()
 void edit_mode() {
     int ch;
     nodelay(stdscr, FALSE);  // Imposta input bloccante
@@ -295,10 +287,8 @@ void show_menu() {
     cursor_x = cursor_y = 0;
     
     // Mostra il menu e gestisci la selezione
-    //int choice = select_mode();
     clear();
     
-    // Titolo del menu
 
     int text_width = 105;  // Width of the ASCII art text
     int start_x = (COLS - text_width) / 2;  // Calculate starting x position to center
@@ -382,11 +372,6 @@ void show_menu() {
     }
 
     if(choice <= num_templates) {
-        // Ottieni le dimensioni esatte del terminale
-
-        // Se non hai bisogno di spazio extra per l'interfaccia, non sottrarre nulla
-        // Se hai elementi aggiuntivi, sottrai lo spazio necessario
-        // Esempio: per una barra di stato in fondo allo schermo
 
         height = LINES - 2;
         width = COLS/2;
@@ -399,7 +384,6 @@ void show_menu() {
         load_template_centered(templates[choice - 1], grid, height, width);
 
     } else {
-        // Solo per griglia personalizzata chiedi dimensioni
         clear();
         echo();
         char input[32];
@@ -432,7 +416,6 @@ void show_menu() {
 }
 
 
-// Modifica main() per registrare il gestore
 int main() {
     // Inizializzazione esistente
     initscr();
@@ -441,7 +424,6 @@ int main() {
     keypad(stdscr, TRUE);
     curs_set(0);
         
-    // Resto del codice main() invariato
     show_menu();
     
     endwin();

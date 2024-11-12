@@ -13,7 +13,7 @@ typedef struct {
     int num_points;
 } Template;
 
-// Glider GUN centrato (3x3)
+// Glider (3x3)
 const Point glider_points[] = {
     {0,0},{0,1},{0,2},{-1,2},{-2,1}
 };
@@ -21,10 +21,10 @@ const Point glider_points[] = {
 const Template glider = {
     "Glider",
     glider_points,
-    5 // Aggiornato il numero di punti
+    5 
 };
 
-// Toad centrato (2x4)
+// Toad (2x4)
 const Point toad_points[] = {
     {-1, -1}, {-1, 0}, {-1, 1},
     {0, -2}, {0, -1}, {0, 0}
@@ -36,7 +36,7 @@ const Template toad = {
     6  // numero di punti
 };
 
-// LWSS centrato (4x5)
+// LWSS (4x5)
 const Point lwss_points[] = {
     {-2, -1}, {-2, 2},
     {-1, 3},
@@ -49,7 +49,7 @@ const Template lwss = {
     9
 };
 
-// MWSS centrato (4x6)
+// MWSS (4x6)
 const Point mwss_points[] = {
     {-2, -2}, {-2, 2},
     {-1, 3},
@@ -62,7 +62,7 @@ const Template mwss = {
     10
 };
 
-// HWSS centrato (4x7)
+// HWSS (4x7)
 const Point hwss_points[] = {
     {-2, -2}, {-2, 3},
     {-1, 4},
@@ -75,7 +75,7 @@ const Template hwss = {
     12
 };
 
-// Pulsar  (13x13)
+// Pulsar (13x13)
 const Point pulsar_points[] = {
     // Parte superiore
     {-6, -2}, {-6, -1}, {-6, 0}, {-6, 2}, {-6, 3}, {-6, 4},
@@ -117,7 +117,7 @@ const Point h_glider_gun_points[] = {
 const Template h_glider_gun = {
     "Glider Gun",
     h_glider_gun_points,
-    36  // numero di punti
+    36 
 };
 
 
@@ -155,7 +155,7 @@ const Point cell_points[] = {
 const Template cell = {
     "Cell",
     cell_points,
-    5  // Numero totale dei punti
+    5  
 };
 
 // Funzione per caricare un template in una griglia di qualsiasi dimensione
