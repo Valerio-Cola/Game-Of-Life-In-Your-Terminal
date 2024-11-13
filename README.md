@@ -1,3 +1,147 @@
+- [Italiano](#Italiano-)
+- [English](#English-)
+
+
+# English 🇬🇧
+
+# 🎮 Game Of Life in Your Terminal
+
+A version of Conway's Game of Life in your terminal written entirely in C, with graphics made possible by the ncurses library.
+
+## 📹 Demonstration Video
+
+<p align="center">
+    <img src="vid.gif">
+</p>
+
+## 📑 Table of Contents
+
+- [🔧 How it Works](#how-it-works-)
+- [🎮 How to Play](#how-to-play-)
+- [📋 Conway's Game Rules](#conways-game-rules-)
+- [🐛 Bugs](#bugs-)
+- [📜 License](#license-)
+
+## 🔧 How it Works
+
+For a more detailed description of the code, see [`main.c`](main.c).
+
+The algorithm operates as follows:
+
+- The **`main`** function is responsible for calling the main functions:
+        - Initialization of the ncurses library.
+        - Disabling key echo to prevent input from being displayed on the screen.
+        - Cursor initialization.
+        - Starting the game menu.
+        - Closing ncurses and terminating the program.
+
+- **`show_menu`** initializes custom colors for the game screen, prints the title, commands, and various templates to choose from. It is also possible to build a grid with custom dimensions that cannot exceed the current terminal size.
+
+- After selecting the choice, two grids are allocated in memory: the current one to be displayed and the next one. This allows the current state of the grid to be displayed while calculating the next state.
+
+- If the custom grid is chosen, the user will be prompted to enter the dimensions.
+
+- In both cases, **✏️ `edit_mode`** is entered, and then the simulation starts with **`game_loop`**.
+
+- In **✏️ `edit_mode`**, through an infinite `while` loop and a `switch` for commands, it is possible to:
+        - Move the cursor in the grid.
+        - Activate and deactivate cells.
+        - Return to the menu.
+        - Change the game speed.
+        - Start the `game_loop`.
+
+- In the **🔄 `game_loop`**, similar to `edit_mode`, it is possible to:
+        - Change the game speed.
+        - Return to the menu.
+        - Terminate the program.
+        - Pause the game.
+        - Restart the simulation.
+
+        A support variable is used to save the grid configuration before starting the simulation. If the simulation is paused, it is possible to move to the next frame.
+
+- If the simulation is not paused, it will calculate the next grid considering all the rules of the original Game and then draw the grid.
+
+## 🎮 How to Play
+
+### 🛠️ Compile the Program
+
+```bash
+gcc main.c -o game_of_life -lncurses
+```
+
+### Run the Program with the Following Command
+
+```bash
+./game_of_life
+```
+
+**Note**: The program might temporarily change the terminal colors once finished. Just open a new terminal.
+
+**Note**: The positions of the text in the menu have been optimized to be as centered as possible without overlapping. If the menu screen is not similar to this, close the program, enlarge the terminal, or execute the command `ctrl + -` and restart it:
+
+![show image img.png](img.png)
+
+**Note**: If the terminal is resized during the program execution, graphical bugs may occur, and it will be necessary to terminate and restart the process.
+
+### Game Commands
+
+**Menu:**
+
+- `UP` `DOWN`: Move cursor$SELECTION_PLACEHOLDER$- `ENTER`: Select scenario
+
+**Edit Mode:**
+
+- `UP` `DOWN` `←` `→`: Move cursor
+- `SPACE`: Activate/Deactivate cell
+- `+`/`-`: Increase/Decrease speed
+- `ENTER`: Start simulation
+- `m`: Return to menu
+
+**During Simulation:**
+
+- `p`: Pause/Play
+- `n`: Next frame (when paused)
+- `r`: Restart
+- `m`: Main menu
+- `q`: Quit
+- `+`/`-`: Increase/Decrease speed
+
+In edit mode, the cursor `"X"` will be visible, but not during the simulation.
+
+In the top left corner, various information will be displayed:
+
+- Generation number
+- Population
+- Game speed (expressed in ms between generations)
+- Two types of coordinates: the cursor position with the center `(0,0)` at the top left and exactly centered in the grid.
+
+## 📋 Conway's Game Rules
+
+Quoting Wikipedia: [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
+
+> It is actually a game without players, meaning its evolution is determined by its initial state, without the need for any input from human players. It takes place on a grid of square cells that extends infinitely in all directions; this grid is called the world. Each cell has 8 neighbors, which are the cells adjacent to it, including those diagonally. Each cell can be in two states: alive or dead (or on and off). The state of the grid evolves in discrete time steps, meaning it progresses in clear intervals. The states of all cells at a given time are used to calculate the state of the cells at the next time step. All cells in the world are updated simultaneously in the transition from one time step to the next: thus, a generation passes.
+
+The transitions depend solely on the state of neighboring cells in that generation:
+
+1. **Underpopulation**: Any live cell with fewer than two live neighbors dies, as if by isolation.
+2. **Survival**: Any live cell with two or three live neighbors survives to the next generation.
+3. **Overpopulation**: Any live cell with more than three live neighbors dies, as if by overpopulation.
+4. **Reproduction**: Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+
+## 🐛 Bugs
+
+- The cursor `"X"` is not visible after a restart.
+- If a template is loaded, the menu is returned to, and a custom grid is selected, the program terminates.
+
+## 📜 License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+
+
+
+# Italiano 🇮🇹
+
 # 🎮 Game Of Life nel Tuo Terminale
 
 Una versione di Conway's Game of Life nel proprio terminale scritta interamente in C, grafica realizzata grazie alla libreria ncurses.
@@ -11,11 +155,11 @@ Una versione di Conway's Game of Life nel proprio terminale scritta interamente 
 
 ## 📑 Indice
 
-- [🔧 Funzionamento](#funzionamento)
-- [🎮 Come giocare](#come-giocare)
-- [📋 Regole del Gioco di Conway](#regole-del-gioco-di-conway)
-- [🐛 Bug](#bug)
-- [📜 Licenza](#licenza)
+- [🔧 Funzionamento](#funzionamento-)
+- [🎮 Come giocare](#come-giocare-)
+- [📋 Regole del Gioco di Conway](#regole-del-gioco-di-conway-)
+- [🐛 Bug](#bug-)
+- [📜 Licenza](#licenza-)
 
 ## 🔧 Funzionamento
 
@@ -82,7 +226,6 @@ gcc main.c -o game_of_life -lncurses
 
 **Menu:**
 
-- `UP` `DOWN`: Muovi cursore
 - `INVIO`: Seleziona lo scenario
 
 **Modalità edit:**
