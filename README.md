@@ -19,7 +19,7 @@ A version of Conway's Game of Life in your terminal written entirely in C, with 
 - [🔧 How it Works](#-how-it-works-)
 - [🎮 How to Play](#-how-to-play-)
 - [📋 Conway's Game Rules](#-conways-game-rules-)
-- [🐛 Bugs](#-bugs-)
+- [Bugs](#bugs-) 🐛 
 - [📜 License](#-license-)
 
 ## 🔧 How it Works
@@ -128,7 +128,7 @@ The transitions depend solely on the state of neighboring cells in that generati
 3. **Overpopulation**: Any live cell with more than three live neighbors dies, as if by overpopulation.
 4. **Reproduction**: Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 
-## 🐛 Bugs
+## Bugs 🐛
 
 - The cursor `"X"` is not visible after a restart.
 - If a template is loaded, the menu is returned to, and a custom grid is selected, the program terminates.
