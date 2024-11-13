@@ -3,13 +3,15 @@
 
 #define TEMPLATE_SIZE 10
 
+// Struttura per rappresentare le coordinate di un punto nella griglia
 typedef struct {
-    int x, y;  // Coordinate relative
+    int x, y;  
 } Point;
 
+// Struttura per rappresentare un template, ovvero un insieme di punti
 typedef struct {
     const char* name;
-    const Point* points;  // Aggiunto const qui
+    const Point* points; 
     int num_points;
 } Template;
 
@@ -164,14 +166,15 @@ void load_template_centered(const Template* tmpl, int** grid, int height, int wi
     int center_y = height / 2;
     int center_x = width / 2;
     
-    // Pulisci la griglia
+    // Imposta tutte le celle a non attive (0)
     for(int i = 0; i < height; i++) {
         for(int j = 0; j < width; j++) {
             grid[i][j] = 0;
         }
     }
     
-    // Posiziona i punti del template centrati
+    // Posiziona i punti del template, poichè i template hanno come punto centrale la coordinata (0,0) per evitare che venga disegnato fuori dalla griglia
+    // in alto a sinistra, si somma il centro della griglia + la coordinata del punto del template
     for(int i = 0; i < tmpl->num_points; i++) {
         int y = center_y + tmpl->points[i].y;
         int x = center_x + tmpl->points[i].x;
@@ -197,6 +200,8 @@ const Template* templates[] = {
     &cell,
     &blockedp4
 };
+
+// Numero di template disponibili
 const int num_templates = sizeof(templates) / sizeof(templates[0]);
 
 #endif
