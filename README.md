@@ -5,8 +5,6 @@ Una versione di Conway's Game of Life nel proprio terminale scritta interamente 
 
 ## 📹 Video dimostrativo
 
-Ecco un video dimostrativo del gioco in azione:
-
 <p align="center">
   <img src="vid.gif">
 </p>
