@@ -12,24 +12,24 @@ Una versione di Conway's Game of Life nel proprio terminale scritta interamente 
 
 ## 🔧 Funzionamento
 
-Per una descrizione più dettagliata del codice vedere [`game_of_life.c`](game_of_life.c).
+Per una descrizione più dettagliata del codice vedere [`main.c`](main.c).
 
 L'algoritmo opera nel seguente modo:
 
-- ** Il `main`** si occupa di chiamare le funzioni principali:
+-  La funzione **`main`** si occupa di chiamare le funzioni principali:
     -  Inizializzazione della libreria ncurses.
     -  Disabilitazione dell'echo dei tasti per evitare che venga mostrato a schermo l'input.
     -  Inizializzazione del cursore.
     -  Avvio del menu di gioco.
     -  Chiusura di ncurses con terminazione del programma.
 
-- ** `show_menu`** inizializza i colori personalizzati per la schermata di gioco, stampa a schermo il titolo, i comandi e i vari template tra cui scegliere. È possibile scegliere anche di costruire una griglia con dimensioni personalizzate che non potranno sforare le dimensioni attuali del terminale.
+-  **`show_menu`** inizializza i colori personalizzati per la schermata di gioco, stampa a schermo il titolo, i comandi e i vari template tra cui scegliere. È possibile scegliere anche di costruire una griglia con dimensioni personalizzate che non potranno sforare le dimensioni attuali del terminale.
 
 -  Dopo aver selezionato la propria scelta vengono allocate due griglie in memoria: quella attuale che verrà mostrata e la successiva. Ciò permette di far visualizzare a schermo lo stato attuale della griglia e nel mentre calcolare lo stato successivo.
 
 -  Se è stata scelta la griglia personalizzata verrà richiesto all'utente di inserire le dimensioni.
 
-- In entrambi i casi si entrerà in **✏️ `edit_mode`** e poi si avvierà la simulazione con il ** `game_loop`**.
+- In entrambi i casi si entrerà in **✏️ `edit_mode`** e poi si avvierà la simulazione con il **`game_loop`**.
 
 - In **✏️ `edit_mode`**, mediante un ciclo `while` che non termina e uno `switch` per i comandi, è possibile:
     -  Spostare il cursore nella griglia.
