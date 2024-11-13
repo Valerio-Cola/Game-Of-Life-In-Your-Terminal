@@ -16,13 +16,13 @@ A version of Conway's Game of Life in your terminal written entirely in C, with 
 
 ## 📑 Table of Contents
 
-- [🔧 How it Works](#-how-it-works-)
-- [🎮 How to Play](#-how-to-play-)
-- [📋 Conway's Game Rules](#-conways-game-rules-)
+- [How it Works](#how-it-works-) 🔧
+- [How to Play](#how-to-play-) 🎮
+- [Conway's Game Rules](#conways-game-rules-) 📋
 - [Bugs](#bugs-) 🐛 
-- [📜 License](#-license-)
+- [License](#license-) 📜
 
-## 🔧 How it Works
+## How it Works 🔧
 
 For a more detailed description of the code, see [`main.c`](main.c).
 
@@ -61,9 +61,9 @@ The algorithm operates as follows:
 
 - If the simulation is not paused, it will calculate the next grid considering all the rules of the original Game and then draw the grid.
 
-## 🎮 How to Play
+## How to Play 🎮
 
-### 🛠️ Compile the Program
+### Compile the Program 🛠️
 
 ```bash
 gcc main.c -o game_of_life -lncurses
@@ -115,7 +115,7 @@ In the top left corner, various information will be displayed:
 - Game speed (expressed in ms between generations)
 - Two types of coordinates: the cursor position with the center `(0,0)` at the top left and exactly centered in the grid.
 
-## 📋 Conway's Game Rules
+## Conway's Game Rules 📋
 
 Quoting Wikipedia: [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
@@ -133,10 +133,9 @@ The transitions depend solely on the state of neighboring cells in that generati
 - The cursor `"X"` is not visible after a restart.
 - If a template is loaded, the menu is returned to, and a custom grid is selected, the program terminates.
 
-## 📜 License
+## License 📜
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 
 
 
@@ -155,13 +154,13 @@ Una versione di Conway's Game of Life nel proprio terminale scritta interamente 
 
 ## 📑 Indice
 
-- [🔧 Funzionamento](#funzionamento-)
-- [🎮 Come giocare](#come-giocare-)
-- [📋 Regole del Gioco di Conway](#regole-del-gioco-di-conway-)
-- [🐛 Bug](#bug-)
-- [📜 Licenza](#licenza-)
+- [Funzionamento](#funzionamento-) 🔧
+- [Come giocare](#come-giocare-) 🎮
+- [Regole del Gioco di Conway](#regole-del-gioco-di-conway-) 📋
+- [Bug](#bug-) 🐛
+- [Licenza](#licenza-) 📜
 
-## 🔧 Funzionamento
+## Funzionamento 🔧
 
 Per una descrizione più dettagliata del codice vedere [`main.c`](main.c).
 
@@ -200,9 +199,9 @@ L'algoritmo opera nel seguente modo:
 
 - Se la simulazione non è in pausa, calcolerà la griglia successiva tenendo conto di tutte le regole del Gioco originale e successivamente disegna la griglia.
 
-## 🎮 Come giocare
+## Come giocare 🎮
 
-### 🛠️ Compila il programma
+### Compila il programma 🛠️
 
 ```bash
 gcc main.c -o game_of_life -lncurses
@@ -254,7 +253,7 @@ In alto a sinistra saranno mostrate varie informazioni relative a:
 - Velocità di gioco (espressa in ms tra una generazione e la successiva)
 - Due tipologie di coordinate: la posizione del cursore con centro `(0,0)` in alto a sinistra e esattamente centrata nella griglia.
 
-## 📋 Regole del Gioco di Conway
+## Regole del Gioco di Conway 📋
 
 Citando Wikipedia: [Gioco della vita](https://it.wikipedia.org/wiki/Gioco_della_vita)
 
@@ -267,11 +266,11 @@ Le transizioni dipendono unicamente dallo stato delle celle vicine in quella gen
 3. **Sovrappopolazione**: Qualsiasi cella viva con più di tre celle vive adiacenti muore, come per effetto di sovrappopolazione.
 4. **Riproduzione**: Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
 
-## 🐛 Bug
+## Bug 🐛
 
 - Il cursore `"X"` dopo il restart non è visibile.
 - Se si carica un template, si torna al menu e si seleziona griglia personalizzata il programma termina.
 
-## 📜 Licenza
+## Licenza 📜
 
 Questo progetto è concesso in licenza sotto la Licenza MIT. Vedi il file [LICENSE](LICENSE) per i dettagli.
