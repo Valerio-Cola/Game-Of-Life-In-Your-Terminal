@@ -15,8 +15,26 @@ a {
 .markdown-body {
   color: #eaeaea;
   background-color: #151515;
+  
+  img {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    max-width: 100%;
+    display: block;
+    margin: 20px auto;
+  }
 }
 
 header {
   background: rgba(0, 0, 0, 0.9);
+}
+
+// Stile specifico per il contenitore della GIF
+p[align="center"] {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
 }
