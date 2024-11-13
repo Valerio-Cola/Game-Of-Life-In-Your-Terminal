@@ -12,7 +12,7 @@ Una versione di Conway's Game of Life nel proprio terminale scritta interamente 
 
 ## 🔧 Funzionamento
 
-Per una descrizione più dettagliata del codice vedere `game_of_life.c`.
+Per una descrizione più dettagliata del codice vedere [`game_of_life.c`](game_of_life.c).
 
 L'algoritmo opera nel seguente modo:
 
