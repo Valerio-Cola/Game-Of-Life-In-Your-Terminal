@@ -1,4 +1,3 @@
-@import "{{ site.theme }}";
 @import "minima/skins/dark";
 @import "minima/initialize";
 
@@ -20,44 +19,10 @@ a {
   background-color: #151515;
   
   img {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
     max-width: 100%;
     display: block;
-    margin: 25px auto;
-  }
-}
-
-header {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-// Stile specifico per il contenitore della GIF
-p[align="center"] {
-  background: rgba(0, 0, 0, 0.2);
-  padding: 20px;
-  border-radius: 8px;
-  margin: 30px 0;
-}
-
-.site-header {
-  border-top: 5px solid #424242;
-  border-bottom: 1px solid #424242;
-  background-color: #1a1a1a;
-}
-
-.site-title {
-  color: #63c0f5;
-  &:hover {
-    text-decoration: none;
-    color: #43a0d5;
-  }
-}
-
-.post-content {
-  h1, h2, h3, h4 {
-    color: #63c0f5;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
   }
 }
