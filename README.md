@@ -7,7 +7,9 @@ Una versione di Conway's Game of Life nel proprio terminale scritta interamente 
 
 Ecco un video dimostrativo del gioco in azione:
 
-![Guarda il video](vid.mp4)
+<p align="center">
+  <img src="vid.mp4">
+</p>
 
 ## 📑 Indice
 
