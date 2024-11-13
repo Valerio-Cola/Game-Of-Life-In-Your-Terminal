@@ -2,6 +2,13 @@
 
 Una versione di Conway's Game of Life nel proprio terminale scritta interamente in C, grafica realizzata grazie alla libreria ncurses.
 
+
+## 📹 Video dimostrativo
+
+Ecco un video dimostrativo del gioco in azione:
+
+![Guarda il video](vid.mp4)
+
 ## 📑 Indice
 
 - [🔧 Funzionamento](#funzionamento)
