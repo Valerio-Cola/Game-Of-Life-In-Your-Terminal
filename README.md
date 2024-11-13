@@ -57,7 +57,7 @@ The algorithm operates as follows:
         - Pause the game.
         - Restart the simulation.
 
-        A support variable is used to save the grid configuration before starting the simulation. If the simulation is paused, it is possible to move to the next frame.
+A support variable is used to save the grid configuration before starting the simulation. If the simulation is paused, it is possible to move to the next frame.
 
 - If the simulation is not paused, it will calculate the next grid considering all the rules of the original Game and then draw the grid.
 
