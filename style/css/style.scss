@@ -1,0 +1,22 @@
+@import "{{ site.theme }}";
+
+body {
+  background: #151515;
+  color: #eaeaea;
+}
+
+a {
+  color: #63c0f5;
+  &:hover {
+    color: #43a0d5;
+  }
+}
+
+.markdown-body {
+  color: #eaeaea;
+  background-color: #151515;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.9);
+}
