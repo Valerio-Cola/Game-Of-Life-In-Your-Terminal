@@ -1,12 +1,14 @@
 - [Italiano](#Italiano-)
 - [English](#English-)
 
-
 # English 🇬🇧
 
 # 🎮 Game Of Life in Your Terminal
 
 A version of Conway's Game of Life in your terminal written entirely in C, with graphics made possible by the ncurses library.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Valerio-Cola/Game-Of-Life-In-Your-Terminal)
+You can run the program online with GitPod. You need to log in with GitHub, select **VSCODE Browser** as the editor, set the class to **Large**, and click continue. Once vscode web is open, expand the terminal and execute ```gcc -Ofast -march=native -fomit-frame-pointer -funroll-loops main.c -o game_of_life -lncurses```
 
 ## 📹 Demonstration Video
 
@@ -145,6 +147,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 Una versione di Conway's Game of Life nel proprio terminale scritta interamente in C, grafica realizzata grazie alla libreria ncurses.
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Valerio-Cola/Game-Of-Life-In-Your-Terminal)
+È possibile eseguire il programma online con GitPod. È necessario effettuare il login con github, selezionare come editor **VSCODE Browser** impostare la classe su **Large** e cliccare su continue. Una volta aperto vscode web espandi il terminale ed esegui  ```gcc -Ofast -march=native -fomit-frame-pointer -funroll-loops main.c -o game_of_life -lncurses```
 
 ## 📹 Video dimostrativo
 
