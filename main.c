@@ -210,6 +210,11 @@ void edit_mode() {
                 current_delay = (current_delay < 500000) ? current_delay + 50000 : current_delay;
                 draw_grid();
                 break;
+            // Torna al menu principale
+            case 'm':
+                is_running = 0;
+                show_menu();
+                return;
             // Avvia la simulazione
             case '\n':
                 // Viene salvato lo stato iniziae della griglia nel caso si voglia ripristinare con "r"
