@@ -120,13 +120,13 @@ In the top left corner, various information will be displayed:
 Quoting Wikipedia: [Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life)
 
 > It is actually a game without players, meaning its evolution is determined by its initial state, without the need for any input from human players. It takes place on a grid of square cells that extends infinitely in all directions; this grid is called the world. Each cell has 8 neighbors, which are the cells adjacent to it, including those diagonally. Each cell can be in two states: alive or dead (or on and off). The state of the grid evolves in discrete time steps, meaning it progresses in clear intervals. The states of all cells at a given time are used to calculate the state of the cells at the next time step. All cells in the world are updated simultaneously in the transition from one time step to the next: thus, a generation passes.
-
-The transitions depend solely on the state of neighboring cells in that generation:
-
-1. **Underpopulation**: Any live cell with fewer than two live neighbors dies, as if by isolation.
-2. **Survival**: Any live cell with two or three live neighbors survives to the next generation.
-3. **Overpopulation**: Any live cell with more than three live neighbors dies, as if by overpopulation.
-4. **Reproduction**: Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
+>
+>The transitions depend solely on the state of neighboring cells in that generation:
+>
+>1. **Underpopulation**: Any live cell with fewer than two live neighbors dies, as if by isolation.
+>2. **Survival**: Any live cell with two or three live neighbors survives to the next generation.
+>3. **Overpopulation**: Any live cell with more than three live neighbors dies, as if by overpopulation.
+>4. **Reproduction**: Any dead cell with exactly three live neighbors becomes a live cell, as if by reproduction.
 
 ## Bugs 🐛
 
@@ -258,13 +258,13 @@ In alto a sinistra saranno mostrate varie informazioni relative a:
 Citando Wikipedia: [Gioco della vita](https://it.wikipedia.org/wiki/Gioco_della_vita)
 
 > Si tratta in realtà di un gioco senza giocatori, intendendo che la sua evoluzione è determinata dal suo stato iniziale, senza necessità di alcun input da parte di giocatori umani. Si svolge su una griglia di caselle quadrate (celle) che si estende all'infinito in tutte le direzioni; questa griglia è detta mondo. Ogni cella ha 8 vicini, che sono le celle ad essa adiacenti, includendo quelle in senso diagonale. Ogni cella può trovarsi in due stati: viva o morta (o accesa e spenta, on e off). Lo stato della griglia evolve in intervalli di tempo discreti, cioè scanditi in maniera netta. Gli stati di tutte le celle in un dato istante sono usati per calcolare lo stato delle celle all'istante successivo. Tutte le celle del mondo vengono quindi aggiornate simultaneamente nel passaggio da un istante a quello successivo: passa così una generazione.
-
-Le transizioni dipendono unicamente dallo stato delle celle vicine in quella generazione:
-
-1. **Solitari**: Qualsiasi cella viva con meno di due celle vive adiacenti muore, come per effetto d'isolamento.
-2. **Sopravvivenza**: Qualsiasi cella viva con due o tre celle vive adiacenti sopravvive alla generazione successiva.
-3. **Sovrappopolazione**: Qualsiasi cella viva con più di tre celle vive adiacenti muore, come per effetto di sovrappopolazione.
-4. **Riproduzione**: Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
+>
+>Le transizioni dipendono unicamente dallo stato delle celle vicine in quella generazione:
+>
+>1. **Solitari**: Qualsiasi cella viva con meno di due celle vive adiacenti muore, come per effetto d'isolamento.
+>2. **Sopravvivenza**: Qualsiasi cella viva con due o tre celle vive adiacenti sopravvive alla generazione successiva.
+>3. **Sovrappopolazione**: Qualsiasi cella viva con più di tre celle vive adiacenti muore, come per effetto di sovrappopolazione.
+>4. **Riproduzione**: Qualsiasi cella morta con esattamente tre celle vive adiacenti diventa una cella viva, come per effetto di riproduzione.
 
 ## Bug 🐛
 
