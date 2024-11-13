@@ -2,8 +2,8 @@
 remote_theme: dracula/gh-pages
 
 # Configurazione del tema
-title: Game of Life
-description: Documentazione del progetto Game of Life
+title: Game of Life in Your Terminal
+description: A simple implementation of Conway's Game of Life runnable in your Linux terminal using ncurses library
 show_downloads: true
 
 # Personalizzazione Dracula
