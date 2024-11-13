@@ -16,11 +16,11 @@ A version of Conway's Game of Life in your terminal written entirely in C, with 
 
 ## 📑 Table of Contents
 
-- [🔧 How it Works](#how-it-works-)
-- [🎮 How to Play](#how-to-play-)
-- [📋 Conway's Game Rules](#conways-game-rules-)
-- [🐛 Bugs](#bugs-)
-- [📜 License](#license-)
+- [🔧 How it Works](#-how-it-works-)
+- [🎮 How to Play](#-how-to-play-)
+- [📋 Conway's Game Rules](#-conways-game-rules-)
+- [🐛 Bugs](#-bugs-)
+- [📜 License](#-license-)
 
 ## 🔧 How it Works
 
